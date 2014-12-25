@@ -16,6 +16,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass'
 gem 'unicorn'
 gem 'unicorn-rails'
+gem 'devise'
 gem 'yard', group: :doc
 
 group :test do
