@@ -3,6 +3,8 @@ Red Cross Youth NUS Chapter Volunteer Management System
 
 An application developed for Red Cross Youth NUS Chapter.
 
+Learn more about [Red Cross Youth NUS Chapter](http://www.nusredcross.com)
+
 Ruby on Rails
 -------------
 
