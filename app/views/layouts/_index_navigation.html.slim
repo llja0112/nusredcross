@@ -1,15 +1,20 @@
 / navigation styled for Bootstrap 3.0
-nav.navbar.navbar-fixed-top.navbar-custom
-  .container
-    .navbar-header
-      button.navbar-toggle[type="button" data-toggle="collapse" data-target=".navbar-collapse"]
-        span.sr-only Toggle navigation
-        span.icon-bar
-        span.icon-bar
-        span.icon-bar
-      a.navbar-brand#logo href="#{root_path}" 
-      	span Red Cross Youth NUS Chapter
+div.navbar-wrapper
+  div.container
+    nav.navbar.navbar-static-top.navbar-inverse
+      div.container
+        div.navbar-header
+          button.navbar-toggle.collapsed[type="button" data-toggle="collapse" data-target="#navbar-collapse"]
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand#logo href="#{root_path}" 
+          	span Red Cross Youth NUS Chapter
 
-    .collapse.navbar-collapse
-      ul.nav.navbar-nav.navbar-right
-        li = link_to 'Log in', new_user_session_path
+        div.collapse.navbar-collapse#navbar-collapse
+          ul.nav.navbar-nav.navbar
+            li = link_to 'Home', root_path
+            li = link_to 'About', about_path
+            li = link_to 'Contact', contact_path
+            li = link_to 'Sign in', new_user_session_path

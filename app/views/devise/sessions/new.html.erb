@@ -1,8 +1,10 @@
 <% provide(:title, "Log in") %>
 
+<div class="index-empty-space"></div>
+
 <div class="row">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {role: "form", class: "form-signin"}) do |f| %>
-    <h2 class="form-signin-heading">Log In to Volunteer Portal</h2>
+    <h2 class="form-signin-heading">Log In to <br>Volunteer Portal</h2>
       <%= f.email_field :email, autofocus: true, :placeholder => "Enter Email", class: 'form-control'  %>
       <%= f.password_field :password, autocomplete: "off", :placeholder => "Enter Password", class: 'form-control'  %>
 
