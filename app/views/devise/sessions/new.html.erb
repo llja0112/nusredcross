@@ -1,24 +1,28 @@
-<% provide(:title, "Log in") %>
+<div class="container">
+  <% provide(:title, "Log in") %>
 
-<div class="index-empty-space"></div>
+  <div class="row index-empty-space"></div>
 
-<div class="row">
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {role: "form", class: "form-signin"}) do |f| %>
-    <h2 class="form-signin-heading">Log In to <br>Volunteer Portal</h2>
-      <%= f.email_field :email, autofocus: true, :placeholder => "Enter Email", class: 'form-control'  %>
-      <%= f.password_field :password, autocomplete: "off", :placeholder => "Enter Password", class: 'form-control'  %>
+  <%= render 'layouts/messages' %>
 
-      <% if devise_mapping.rememberable? -%>
-        <div class="checkbox">
-          <label>
-            <%= f.check_box :remember_me %>
-            Remember me?
-          </label>
-        </div>
-      <% end -%>
+  <div class="row">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {role: "form", class: "form-signin"}) do |f| %>
+      <h2 class="form-signin-heading">Log In to <br>Volunteer Portal</h2>
+        <%= f.email_field :email, autofocus: true, :placeholder => "Enter Email", class: 'form-control'  %>
+        <%= f.password_field :password, autocomplete: "off", :placeholder => "Enter Password", class: 'form-control'  %>
 
-      <%= f.submit "Log in", class: "btn btn-primary" %>
+        <% if devise_mapping.rememberable? -%>
+          <div class="checkbox">
+            <label>
+              <%= f.check_box :remember_me %>
+              Remember me?
+            </label>
+          </div>
+        <% end -%>
 
-      <p><%= render "devise/shared/links" %></p>
-  <% end %>
+        <%= f.submit "Log in", class: "btn btn-primary" %>
+
+        <p><%= render "devise/shared/links" %></p>
+    <% end %>
+  </div>
 </div>
