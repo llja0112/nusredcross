@@ -18,4 +18,4 @@
 
 # Ignore local environments
 .env
-.ruby-build
+.ruby-version
